@@ -15,10 +15,7 @@ read num
 i=0
 
 while [ $i -lt $((num)) ];
-do 
+do
 	wget -r -nd -H -e robots=off -A jpg,png -l 1 "http://www.heso.blue/?text=$photo&page=$((i + 1))"
 	i=$(( i + 1 ))
-	echo $i
 done
-
-
